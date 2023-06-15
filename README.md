@@ -153,9 +153,11 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
         albumid
     LIMIT 9, 21
 </details>
+
+
 * * *
 
-**5** - Récupérer le titre et les ids des albums ayant plus de 18 chansons et l'afficher le nombre de chanson dans une colonne qui s'appelerait : "nombre_de_chansons". Récupérer également le nom de l'artiste de l'album
+**5** - Récupérer le titre et les ids des albums ayant plus de 18 chansons et l'afficher le nombre de chanson dans une colonne qui s'appelerait : "nombre_de_chansons". Récupérer également le nom de l'artiste de l'album et l'afficher dans une colonne qui s'appelerait "nom_artiste"
 
 <details>
     <summary>Voir le résultat attendu</summary>
@@ -163,7 +165,7 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
 ## Albums ayant plus de 18 chansons
 
 ---
-| AlbumId | Title | nombre_de_chansons | Name | 
+| AlbumId | Title | nombre_de_chansons | nom_artiste | 
 | ---: | --- | ---: | --- | 
 | 23 | Minha Historia | 34 | Chico Buarque | 
 | 24 | Afrociberdelia | 23 | Chico Science & Nação Zumbi | 
@@ -199,7 +201,7 @@ SELECT
 	tracks.Albumid,
 	title,
 	COUNT(trackid) AS nombre_de_chansons,
-	artists.Name
+	artists.Name as nom_artiste
 FROM
 	tracks
 INNER JOIN albums ON albums.Albumid = tracks.Albumid
