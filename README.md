@@ -16,7 +16,7 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
 <details>
     <summary>Voir le résultat attendu</summary>
 
-employees
+Liste des employés
 ---
 | City | Title | 
 | --- | --- | 
@@ -32,14 +32,8 @@ employees
     
 </details>
 
-    <details>
-        <summary>Voir la solution</summary>
-        
-        Spoiler text. Note that it's important to have a space after the summary tag. You should be able to write any markdown you want inside the `<details>` tag... just make sure you close `<details>` afterward.
-        
-        ```javascript
-        console.log("I'm a code block!");
-        ```
-        
-    </details>
+<details>
+    <summary>Voir la solution</summary>
+       SELECT City, Title FROM employees
+</details>
 
