@@ -1354,3 +1354,25 @@ Liste des chansons Rocks
     WHERE tracks.GenreId = 1  
 </details>
 
+
+**3**
+    - Récupérer le nombre d'albums créé par l'artiste "Nirvana" (à vous de voir comment trouver son ID sans faire defiler la liste si vous avez envie) et l'afficher dans une colonne qui s'appelerait : "nombre_albums"
+
+<details>
+    <summary>Voir le résultat attendu</summary>
+
+Nombre d'albums de Nirvana
+---
+| nombre_albums | 
+| ---: | 
+| 2 | 
+
+    
+</details>
+
+<details>
+    <summary>Voir la solution</summary>
+    SELECT COUNT(AlbumId) AS nombre_albums FROM albums
+    WHERE albums.ArtistId = 110
+
+</details>
