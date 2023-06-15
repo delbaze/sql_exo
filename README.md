@@ -38,7 +38,6 @@ Liste des employés
 </details>
 
 * * *
-* * *
 
 **2**
     - Récupérer toutes les infos des 30 premières chansons de type "Rock"
@@ -92,7 +91,6 @@ Liste des 30 premières chansons Rocks
 </details>
 
 * * *
-* * *
 
 **3**
     - Récupérer le nombre d'albums créé par l'artiste "Nirvana" (à vous de voir comment trouver son ID sans faire defiler la liste si vous avez envie) et l'afficher dans une colonne qui s'appelerait : "nombre_albums"
@@ -117,7 +115,6 @@ Nombre d'albums de Nirvana
 </details>
 
 
-* * *
 * * *
 
 **4**
