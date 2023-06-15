@@ -110,3 +110,52 @@ Nombre d'albums de Nirvana
     WHERE albums.ArtistId = 110
 
 </details>
+
+
+
+
+**4**
+    - Récupérer le nombre de chansons pour les albums du 10ème au 30ème et l'afficher dans une colonne qui s'appelerait : "nombre_de_chansons"
+
+<details>
+    <summary>Voir le résultat attendu</summary>
+
+Nombre de chansons des albums 10 à 30
+---
+| AlbumId | nombre_de_chansons | 
+| ---: | ---: | 
+| 10 | 14 | 
+| 11 | 12 | 
+| 12 | 12 | 
+| 13 | 8 | 
+| 14 | 13 | 
+| 15 | 5 | 
+| 16 | 7 | 
+| 17 | 10 | 
+| 18 | 17 | 
+| 19 | 11 | 
+| 20 | 11 | 
+| 21 | 18 | 
+| 22 | 3 | 
+| 23 | 34 | 
+| 24 | 23 | 
+| 25 | 13 | 
+| 26 | 17 | 
+| 27 | 14 | 
+| 28 | 10 | 
+| 29 | 14 | 
+| 30 | 14 | 
+
+</details>
+
+<details>
+    <summary>Voir la solution</summary>
+    SELECT
+        albumid,
+        COUNT(trackid) as nombre_de_chansons
+    FROM
+        tracks
+    GROUP BY
+        albumid
+    LIMIT 9, 21
+</details>
