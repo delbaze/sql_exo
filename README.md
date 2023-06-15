@@ -221,7 +221,7 @@ HAVING COUNT(trackid) > 18;
 <details>
     <summary>Voir le résultat attendu</summary>
 
-## Albums ayant plus de 18 chansons
+## Durée chansons albums
 ---
 | AlbumId | Title | chanson_la_plus_courte | chanson_la_plus_longue | duree_moyenne | 
 | ---: | --- | --- | --- | --- | 
@@ -256,3 +256,40 @@ LIMIT 10
 </details>
 
 
+* * *
+
+
+**7 - Pour chaque année concernée par au moins une facture(invoice), calculer le montant moyen (avec 2 décimales) et l'afficher dans une colonne "moyenne_montant", et calculer le total perçu sur cette année**
+
+<details>
+    <summary>Voir le résultat attendu</summary>
+
+## Factures (moyenne, total)
+invoices
+---
+| InvoiceYear | moyenne_montant | total_annee | 
+| --- | ---: | ---: | 
+| 2009 | 5,42 | 449,46 | 
+| 2010 | 5,8 | 481,45 | 
+| 2011 | 5,66 | 469,58 | 
+| 2012 | 5,75 | 477,53 | 
+| 2013 | 5,63 | 450,58 | 
+
+
+</details>
+
+<details>
+    <summary>Voir la solution</summary>
+SELECT
+   STRFTIME('%Y', InvoiceDate) InvoiceYear, 
+   round(AVG(invoices."Total"), 2) AS moyenne_montant,
+   SUM("Total") AS total_annee
+FROM
+   invoices
+GROUP BY
+   STRFTIME('%Y', InvoiceDate)
+ORDER BY
+   InvoiceYear;
+</details>
+
+* * *  
