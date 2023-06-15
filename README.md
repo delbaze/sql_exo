@@ -34,8 +34,8 @@ Liste des employés
 
 <details>
     <summary>Voir la solution</summary>
-```{sql, connection = db}
+~~~~sql
 DROP TABLE IF EXISTS Order_Detail
-```
+~~~~
 </details>
 
