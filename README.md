@@ -157,6 +157,8 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
 
 * * *
 
+
+
 **5** - Récupérer le titre et les ids des albums ayant plus de 18 chansons et l'afficher le nombre de chanson dans une colonne qui s'appelerait : "nombre_de_chansons". Récupérer également le nom de l'artiste de l'album et l'afficher dans une colonne qui s'appelerait "nom_artiste"
 
 <details>
@@ -210,3 +212,47 @@ GROUP BY
 	tracks.albumid
 HAVING COUNT(trackid) > 18;
 </details>
+
+
+**6** - Récupérer, pour les 10 premiers albums, l'id, le titre et une colonne s'appelant "chanson_la_plus_courte", une autre "chanson_la_plus_longue" et une dernière s'appelant "duree_moyenne" (pas besoin de vous expliquer ce qu'elles doivent contenir?)
+Afficher les durées sous cette forme : MM:SS
+
+<details>
+    <summary>Voir le résultat attendu</summary>
+
+## Albums ayant plus de 18 chansons
+---
+| AlbumId | Title | chanson_la_plus_courte | chanson_la_plus_longue | duree_moyenne | 
+| ---: | --- | --- | --- | --- | 
+| 1 | For Those About To Rock We Salute You | 03:19 | 05:43 | 04:00 | 
+| 2 | Balls to the Wall | 05:42 | 05:42 | 05:42 | 
+| 3 | Restless and Wild | 03:50 | 06:15 | 04:46 | 
+| 4 | Let There Be Rock | 03:35 | 06:09 | 05:06 | 
+| 5 | Big Ones | 03:35 | 06:21 | 04:54 | 
+| 6 | Jagged Little Pill | 02:56 | 08:11 | 04:25 | 
+| 7 | Facelift | 02:32 | 06:27 | 04:30 | 
+| 8 | Warner 25 Anos | 02:06 | 06:06 | 03:27 | 
+| 9 | Plays Metallica By Four Cellos | 03:41 | 07:16 | 05:33 | 
+| 10 | Audioslave | 03:26 | 05:43 | 04:40 | 
+
+
+</details>
+
+<details>
+    <summary>Voir la solution</summary>
+SELECT
+	tracks.albumid,
+	title,
+	min(	STRFTIME('%M:%S', milliseconds / 1000, 'unixepoch')) AS chanson_la_plus_courte,
+	max(	STRFTIME('%M:%S', milliseconds / 1000, 'unixepoch')) AS chanson_la_plus_longue,
+	STRFTIME('%M:%S', round(avg(milliseconds),2) / 1000, 'unixepoch') AS duree_moyenne
+FROM
+	tracks
+INNER JOIN albums ON albums.albumid = tracks.albumid
+GROUP BY
+	tracks.albumid 
+LIMIT 10
+</details>
+
+
+* * *
