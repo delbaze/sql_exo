@@ -8,7 +8,7 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
 
 ## Niveau 1
 
-**1** - Récupérer la ville et le poste ("Title") de tous les employés
+**1 - Récupérer la ville et le poste ("Title") de tous les employés**
 
 <details>
     <summary>Voir le résultat attendu</summary>
@@ -35,7 +35,7 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
 
 ---
 
-**2** - Récupérer toutes les infos des 30 premières chansons de type "Rock"
+**2 - Récupérer toutes les infos des 30 premières chansons de type "Rock"**
 
 <details>
     <summary>Voir le résultat attendu</summary>
@@ -87,7 +87,7 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
 
 ---
 
-**3** - Récupérer le nombre d'albums créé par l'artiste "Nirvana" (à vous de voir comment trouver son ID sans faire defiler la liste si vous avez envie) et l'afficher dans une colonne qui s'appelerait : "nombre_albums"
+**3 - Récupérer le nombre d'albums créé par l'artiste "Nirvana" (à vous de voir comment trouver son ID sans faire defiler la liste si vous avez envie) et l'afficher dans une colonne qui s'appelerait : "nombre_albums"**
 
 <details>
     <summary>Voir le résultat attendu</summary>
@@ -109,7 +109,7 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
 
 ---
 
-**4** - Récupérer le nombre de chansons pour les albums du 10ème au 30ème et l'afficher dans une colonne qui s'appelerait : "nombre_de_chansons"
+**4 - Récupérer le nombre de chansons pour les albums du 10ème au 30ème et l'afficher dans une colonne qui s'appelerait : "nombre_de_chansons"**
 
 <details>
     <summary>Voir le résultat attendu</summary>
@@ -159,7 +159,7 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
 
 
 
-**5** - Récupérer le titre et les ids des albums ayant plus de 18 chansons et l'afficher le nombre de chanson dans une colonne qui s'appelerait : "nombre_de_chansons". Récupérer également le nom de l'artiste de l'album et l'afficher dans une colonne qui s'appelerait "nom_artiste"
+**5 - Récupérer le titre et les ids des albums ayant plus de 18 chansons et l'afficher le nombre de chanson dans une colonne qui s'appelerait : "nombre_de_chansons". Récupérer également le nom de l'artiste de l'album et l'afficher dans une colonne qui s'appelerait "nom_artiste"**
 
 <details>
     <summary>Voir le résultat attendu</summary>
@@ -214,8 +214,8 @@ HAVING COUNT(trackid) > 18;
 </details>
 
 
-**6** - Récupérer, pour les 10 premiers albums, l'id, le titre et une colonne s'appelant "chanson_la_plus_courte", une autre "chanson_la_plus_longue" et une dernière s'appelant "duree_moyenne" (pas besoin de vous expliquer ce qu'elles doivent contenir?)
-Afficher les durées sous cette forme : MM:SS
+**6 - Récupérer, pour les 10 premiers albums, l'id, le titre et une colonne s'appelant "chanson_la_plus_courte", une autre "chanson_la_plus_longue" et une dernière s'appelant "duree_moyenne" (pas besoin de vous expliquer ce qu'elles doivent contenir?)
+Afficher les durées sous cette forme : MM:SS **
 
 <details>
     <summary>Voir le résultat attendu</summary>
