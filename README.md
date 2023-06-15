@@ -37,6 +37,9 @@ Liste des employés
     SELECT City, Title FROM employees
 </details>
 
+* * *
+* * *
+
 **2**
     - Récupérer toutes les infos des 30 premières chansons de type "Rock"
 
@@ -88,6 +91,8 @@ Liste des 30 premières chansons Rocks
     LIMIT 30
 </details>
 
+* * *
+* * *
 
 **3**
     - Récupérer le nombre d'albums créé par l'artiste "Nirvana" (à vous de voir comment trouver son ID sans faire defiler la liste si vous avez envie) et l'afficher dans une colonne qui s'appelerait : "nombre_albums"
@@ -112,7 +117,8 @@ Nombre d'albums de Nirvana
 </details>
 
 
-
+* * *
+* * *
 
 **4**
     - Récupérer le nombre de chansons pour les albums du 10ème au 30ème et l'afficher dans une colonne qui s'appelerait : "nombre_de_chansons"
