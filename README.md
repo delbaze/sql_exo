@@ -34,8 +34,6 @@ Liste des employés
 
 <details>
     <summary>Voir la solution</summary>
-~~~~sql
-DROP TABLE IF EXISTS Order_Detail
-~~~~
+    SELECT City, Title FROM employees
 </details>
 
