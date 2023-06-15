@@ -34,6 +34,8 @@ Liste des employés
 
 <details>
     <summary>Voir la solution</summary>
-       SELECT City, Title FROM employees
+```sql
+   SELECT City, Title FROM employees
+```
 </details>
 
