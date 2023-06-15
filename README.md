@@ -213,9 +213,10 @@ GROUP BY
 HAVING COUNT(trackid) > 18;
 </details>
 
+* * *  
 
-**6 - Récupérer, pour les 10 premiers albums, l'id, le titre et une colonne s'appelant "chanson_la_plus_courte", une autre "chanson_la_plus_longue" et une dernière s'appelant "duree_moyenne" (pas besoin de vous expliquer ce qu'elles doivent contenir?)
-Afficher les durées sous cette forme : MM:SS **
+**6 - Récupérer, pour les 10 premiers albums, l'id, le titre et une colonne s'appelant "chanson_la_plus_courte", une autre "chanson_la_plus_longue" et une dernière s'appelant "duree_moyenne" (pas besoin de vous expliquer ce qu'elles doivent contenir?) Afficher les durées sous cette forme "MM:SS"**
+ 
 
 <details>
     <summary>Voir le résultat attendu</summary>
@@ -255,4 +256,3 @@ LIMIT 10
 </details>
 
 
-* * *
