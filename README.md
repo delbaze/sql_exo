@@ -34,8 +34,8 @@ Liste des employés
 
 <details>
     <summary>Voir la solution</summary>
-    ``` sql
-    SELECT City, Title FROM employees
-    ```
+```{sql, connection = db}
+DROP TABLE IF EXISTS Order_Detail
+```
 </details>
 
