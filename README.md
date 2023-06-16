@@ -425,7 +425,7 @@ LIMIT 50
 ## Niveau 2
 
 
-**9 - Récupérer la liste des artists ayant "mor" peut importe à quel endroit dans leur nom et afficher dans une colonne "nombre_albums" le nombre d'albums**
+**9 - Récupérer la liste des artistes ayant "mor" peut importe à quel endroit dans leur nom et afficher dans une colonne "nombre_albums" le nombre d'albums**
 
 <details>
     <summary>Voir le résultat attendu</summary>
@@ -459,6 +459,41 @@ GROUP BY artists.name
 <details>
     <summary>INDICES</summary>
     Vous devez utiliser SELECT, FROM, COUNT, INNER JOIN, AS, WHERE, LIKE et GROUP BY
+</details>
+
+---
+
+* * *
+
+**10 - Récupérer la liste des ids d'artistes n'ayant aucun album!**
+
+<details>
+    <summary>Voir le résultat attendu</summary>
+
+## Artistes n'ayant pas d'albums
+artists
+---
+| ArtistId | Name | nombre_albums | 
+| ---: | --- | ---: | 
+| 4 | Alanis Morissette | 1 | 
+| 82 | Faith No More | 4 | 
+| 72 | Vinícius De Moraes | 1 | 
+
+</details>
+
+<details>
+    <summary>Voir la solution</summary>
+SELECT ArtistId
+FROM artists
+EXCEPT
+SELECT ArtistId
+FROM albums
+
+</details>
+
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, FROM ET EXCEPT
 </details>
 
 ---
