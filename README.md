@@ -419,3 +419,46 @@ LIMIT 50
 
 
 * * *  
+
+
+
+## Niveau 2
+
+
+**9 - Récupérer la liste des artists ayant "mor" peut importe à quel endroit dans leur nom et afficher dans une colonne "nombre_albums" le nombre d'albums**
+
+<details>
+    <summary>Voir le résultat attendu</summary>
+
+## Artistes contenant "mor"
+artists
+---
+| ArtistId | Name | nombre_albums | 
+| ---: | --- | ---: | 
+| 4 | Alanis Morissette | 1 | 
+| 82 | Faith No More | 4 | 
+| 72 | Vinícius De Moraes | 1 | 
+
+</details>
+
+<details>
+    <summary>Voir la solution</summary>
+SELECT
+	artists.ArtistId,
+	artists.name,
+	COUNT(albums.AlbumId) AS nombre_albums
+FROM artists
+
+INNER JOIN albums ON albums.ArtistId = artists.ArtistId
+
+WHERE
+	artists.name LIKE '%mor%'
+GROUP BY artists.name
+</details>
+
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, FROM, COUNT, INNER JOIN, AS, WHERE, LIKE et GROUP BY
+</details>
+
+---

@@ -1,7 +1,1 @@
-SELECT
-	albumid,
-	COUNT(trackid) AS nombre_de_chansons
-FROM
-	tracks
-GROUP BY
-	albumid;
+SELECT albumid, COUNT(trackid) as nombre_de_chansons FROM tracks GROUP BY albumid LIMIT 9, 21
