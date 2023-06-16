@@ -327,3 +327,97 @@ ORDER BY
     <summary>INDICES</summary>
     Vous devez utiliser SELECT, FROM, GROUP BY, round, AVG, SUM, AS et ORDER BY
 </details>
+
+* * *
+
+
+**8 - Récupérer les 50 premières chansons de type "Protected MPEG-4 video file" et "AAC audio file" en les classant par ordre croissant (à partir de leur nom). Vous devez avoir leur Id, leur Name, le nom du type du média dans une colonne "Type", et le prix de la chanson formaté en euro
+
+<details>
+    <summary>Voir le résultat attendu</summary>
+
+## Chansons MPEG-4 et AAC
+
+---
+| TrackId | Name | Type | Prix | 
+| ---: | --- | --- | --- | 
+| 2918 | "?" | Protected MPEG-4 video file | 1.99 € | 
+| 2869 | ...And Found | Protected MPEG-4 video file | 1.99 € | 
+| 2906 | ...In Translation | Protected MPEG-4 video file | 1.99 € | 
+| 3166 | .07% | Protected MPEG-4 video file | 1.99 € | 
+| 3209 | A Benihana Christmas, Pts. 1 & 2 | Protected MPEG-4 video file | 1.99 € | 
+| 2833 | A Day In the Life | Protected MPEG-4 video file | 1.99 € | 
+| 2825 | A Measure of Salvation | Protected MPEG-4 video file | 1.99 € | 
+| 2857 | A Tale of Two Cities | Protected MPEG-4 video file | 1.99 € | 
+| 2872 | Abandoned | Protected MPEG-4 video file | 1.99 € | 
+| 2860 | Adrift | Protected MPEG-4 video file | 1.99 € | 
+| 2888 | All the Best Cowboys Have Daddy Issues | Protected MPEG-4 video file | 1.99 € | 
+| 3349 | Amanda | AAC audio file | 0.99 € | 
+| 3210 | Back from Vacation | Protected MPEG-4 video file | 1.99 € | 
+| 3246 | Baltar's Escape | Protected MPEG-4 video file | 1.99 € | 
+| 3402 | Band Members Discuss Tracks from "Revelations" | Protected MPEG-4 video file | 0.99 € | 
+| 3176 | Basketball | Protected MPEG-4 video file | 1.99 € | 
+| 3226 | Battlestar Galactica, Pt. 1 | Protected MPEG-4 video file | 1.99 € | 
+| 3227 | Battlestar Galactica, Pt. 2 | Protected MPEG-4 video file | 1.99 € | 
+| 3228 | Battlestar Galactica, Pt. 3 | Protected MPEG-4 video file | 1.99 € | 
+| 2819 | Battlestar Galactica: The Story So Far | Protected MPEG-4 video file | 1.99 € | 
+| 3221 | Beach Games | Protected MPEG-4 video file | 1.99 € | 
+| 3213 | Ben Franklin | Protected MPEG-4 video file | 1.99 € | 
+| 2844 | Better Halves | Protected MPEG-4 video file | 1.99 € | 
+| 3188 | Booze Cruise | Protected MPEG-4 video file | 1.99 € | 
+| 2919 | Born to Run | Protected MPEG-4 video file | 1.99 € | 
+| 3192 | Boys and Girls | Protected MPEG-4 video file | 1.99 € | 
+| 3206 | Branch Closing | Protected MPEG-4 video file | 1.99 € | 
+| 3428 | Branch Closing | Protected MPEG-4 video file | 1.99 € | 
+| 3215 | Business School | Protected MPEG-4 video file | 1.99 € | 
+| 3361 | Cabin Fever | Protected MPEG-4 video file | 1.99 € | 
+| 3199 | Casino Night - Season Finale | Protected MPEG-4 video file | 1.99 € | 
+| 2909 | Catch-22 | Protected MPEG-4 video file | 1.99 € | 
+| 3187 | Christmas Party | Protected MPEG-4 video file | 1.99 € | 
+| 3216 | Cocktails | Protected MPEG-4 video file | 1.99 € | 
+| 2823 | Collaborators | Protected MPEG-4 video file | 1.99 € | 
+| 2842 | Collision | Protected MPEG-4 video file | 1.99 € | 
+| 2879 | Collision | Protected MPEG-4 video file | 1.99 € | 
+| 2854 | Company Man | Protected MPEG-4 video file | 1.99 € | 
+| 2855 | Company Man | Protected MPEG-4 video file | 1.99 € | 
+| 2880 | Confidence Man | Protected MPEG-4 video file | 1.99 € | 
+| 3341 | Confirmed Dead | Protected MPEG-4 video file | 1.99 € | 
+| 3198 | Conflict Resolution | Protected MPEG-4 video file | 1.99 € | 
+| 2837 | Crossroads, Pt. 1 | Protected MPEG-4 video file | 1.99 € | 
+| 2838 | Crossroads, Pt. 2 | Protected MPEG-4 video file | 1.99 € | 
+| 2912 | D.O.C. | Protected MPEG-4 video file | 1.99 € | 
+| 2910 | Dave | Protected MPEG-4 video file | 1.99 € | 
+| 3350 | Despertar | AAC audio file | 0.99 € | 
+| 2913 | Deus Ex Machina | Protected MPEG-4 video file | 1.99 € | 
+| 3351 | Din Din Wo (Little Child) | AAC audio file | 0.99 € | 
+| 2834 | Dirty Hands | Protected MPEG-4 video file | 1.99 € | 
+
+
+
+</details>
+
+<details>
+    <summary>Voir la solution</summary>
+SELECT
+	tracks.TrackId,
+	tracks.Name,
+	media_types.Name as Type,
+    FORMAT("%.2f €", tracks.UnitPrice) AS Prix
+FROM
+	tracks
+INNER JOIN media_types ON tracks.MediaTypeId = media_types.MediaTypeId
+WHERE
+	tracks.MediaTypeId IN (3, 5)
+ORDER BY
+	tracks.Name ASC
+LIMIT 50
+</details>
+
+* * *  
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, FROM, INNER JOIN, WHERE, FORMAT, AS, ORDER BY et LIMIT
+</details>
+
+
+* * *  
