@@ -760,4 +760,47 @@ FROM customers;
     Vous devez utiliser SELECT, FROM , AS et UNION
 </details>
 
+* * *
+
+**13 - Récupérer les chansons de l'album se nommant "Morning Dance" sans jointure!**
+
+<details>
+    <summary>Voir le résultat attendu</summary>
+
+## Liste employés et clients
+---
+| TrackId | Name | AlbumId | 
+| ---: | --- | ---: | 
+| 2523 | Morning Dance | 204 | 
+| 2524 | Jubilee | 204 | 
+| 2525 | Rasul | 204 | 
+| 2526 | Song For Lorraine | 204 | 
+| 2527 | Starburst | 204 | 
+| 2528 | Heliopolis | 204 | 
+| 2529 | It Doesn't Matter | 204 | 
+| 2530 | Little Linda | 204 | 
+| 2531 | End Of Romanticism | 204 | 
+
+</details>
+
+<details>
+    <summary>Voir la solution</summary>
+SELECT trackid,
+       name,
+       albumid
+FROM tracks
+WHERE albumid = (
+   SELECT albumid
+   FROM albums
+   WHERE title = 'Morning Dance'
+);
+
+
+</details>
+
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, FROM  et WHERE uniquement!
+</details>
+
 ---
