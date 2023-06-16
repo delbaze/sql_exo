@@ -461,8 +461,6 @@ GROUP BY artists.name
     Vous devez utiliser SELECT, FROM, COUNT, INNER JOIN, AS, WHERE, LIKE et GROUP BY
 </details>
 
----
-
 * * *
 
 **10 - Récupérer la liste des ids d'artistes n'ayant aucun album!**
@@ -564,8 +562,6 @@ FROM albums
     Vous devez utiliser SELECT, FROM et EXCEPT
 </details>
 
----
-
 * * *
 
 **11 - Récupérer la liste des factures de 2010 ayant un montant inférieur à 5 et supérieur à 10, formatez le montant en euros, et la date de la facture sous cette forme par exemple: 10/01/2010 et classez les par montant croissant**
@@ -664,8 +660,6 @@ ORDER BY
     Vous devez utiliser SELECT, FROM, FORMAT, STRFTIME, NOT BETWEEN,  AS ET AND
 </details>
 
----
-
 
 
 * * *
@@ -746,7 +740,6 @@ ORDER BY
 | Tim | Goyer | Customer | 
 | Victor | Stevens | Customer | 
 | Wyatt | Girard | Customer | 
-
 
 
 </details>
