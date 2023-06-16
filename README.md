@@ -568,6 +568,107 @@ FROM albums
 
 * * *
 
+**12 - Générez une liste qui combine les employés et les clients, et indiquez dans une colonne dédiée le type d'utilisateur (employé ou client)**
+
+<details>
+    <summary>Voir le résultat attendu</summary>
+
+## Liste employés et clients
+---
+| FirstName | LastName | Type | 
+| --- | --- | --- | 
+| Aaron | Mitchell | Customer | 
+| Alexandre | Rocha | Customer | 
+| Andrew | Adams | Employee | 
+| Astrid | Gruber | Customer | 
+| Bjørn | Hansen | Customer | 
+| Camille | Bernard | Customer | 
+| Daan | Peeters | Customer | 
+| Dan | Miller | Customer | 
+| Diego | Gutiérrez | Customer | 
+| Dominique | Lefebvre | Customer | 
+| Eduardo | Martins | Customer | 
+| Edward | Francis | Customer | 
+| Ellie | Sullivan | Customer | 
+| Emma | Jones | Customer | 
+| Enrique | Muñoz | Customer | 
+| Fernanda | Ramos | Customer | 
+| Frank | Harris | Customer | 
+| Frank | Ralston | Customer | 
+| František | Wichterlová | Customer | 
+| François | Tremblay | Customer | 
+| Fynn | Zimmermann | Customer | 
+| Hannah | Schneider | Customer | 
+| Heather | Leacock | Customer | 
+| Helena | Holý | Customer | 
+| Hugh | O'Reilly | Customer | 
+| Isabelle | Mercier | Customer | 
+| Jack | Smith | Customer | 
+| Jane | Peacock | Employee | 
+| Jennifer | Peterson | Customer | 
+| Joakim | Johansson | Customer | 
+| Johannes | Van der Berg | Customer | 
+| John | Gordon | Customer | 
+| João | Fernandes | Customer | 
+| Julia | Barnett | Customer | 
+| Kara | Nielsen | Customer | 
+| Kathy | Chase | Customer | 
+| Ladislav | Kovács | Customer | 
+| Laura | Callahan | Employee | 
+| Leonie | Köhler | Customer | 
+| Lucas | Mancini | Customer | 
+| Luis | Rojas | Customer | 
+| Luís | Gonçalves | Customer | 
+| Madalena | Sampaio | Customer | 
+| Manoj | Pareek | Customer | 
+| Marc | Dubois | Customer | 
+| Margaret | Park | Employee | 
+| Mark | Philips | Customer | 
+| Mark | Taylor | Customer | 
+| Martha | Silk | Customer | 
+| Michael | Mitchell | Employee | 
+| Michelle | Brooks | Customer | 
+| Nancy | Edwards | Employee | 
+| Niklas | Schröder | Customer | 
+| Patrick | Gray | Customer | 
+| Phil | Hughes | Customer | 
+| Puja | Srivastava | Customer | 
+| Richard | Cunningham | Customer | 
+| Robert | Brown | Customer | 
+| Robert | King | Employee | 
+| Roberto | Almeida | Customer | 
+| Stanisław | Wójcik | Customer | 
+| Steve | Johnson | Employee | 
+| Steve | Murray | Customer | 
+| Terhi | Hämäläinen | Customer | 
+| Tim | Goyer | Customer | 
+| Victor | Stevens | Customer | 
+| Wyatt | Girard | Customer | 
+
+
+
+</details>
+
+<details>
+    <summary>Voir la solution</summary>
+SELECT FirstName, LastName, 'Employee' AS Type
+FROM employees
+UNION
+SELECT FirstName, LastName, 'Customer'
+FROM customers;
+
+
+</details>
+
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, FROM , AS et UNION
+</details>
+
+---
+
+* * *
+
 **11 - Récupérer la liste des factures de 2010 ayant un montant inférieur à 5 et supérieur à 10, formatez le montant en euros, et la date de la facture sous cette forme par exemple: 10/01/2010 et classez les par montant croissant**
 
 <details>
