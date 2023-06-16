@@ -322,7 +322,6 @@ ORDER BY
    InvoiceYear;
 </details>
 
-* * *  
 <details>
     <summary>INDICES</summary>
     Vous devez utiliser SELECT, FROM, GROUP BY, round, AVG, SUM, AS et ORDER BY
@@ -331,7 +330,7 @@ ORDER BY
 * * *
 
 
-**8 - Récupérer les 50 premières chansons de type "Protected MPEG-4 video file" et "AAC audio file" en les classant par ordre croissant (à partir de leur nom). Vous devez avoir leur Id, leur Name, le nom du type du média dans une colonne "Type", et le prix de la chanson formaté en euro
+**8 - Récupérer les 50 premières chansons de type "Protected MPEG-4 video file" et "AAC audio file" en les classant par ordre croissant (à partir de leur nom). Vous devez avoir leur Id, leur Name, le nom du type du média dans une colonne "Type", et le prix de la chanson formaté en euro**
 
 <details>
     <summary>Voir le résultat attendu</summary>
@@ -413,7 +412,6 @@ ORDER BY
 LIMIT 50
 </details>
 
-* * *  
 <details>
     <summary>INDICES</summary>
     Vous devez utiliser SELECT, FROM, INNER JOIN, WHERE, FORMAT, AS, ORDER BY et LIMIT
