@@ -33,6 +33,11 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
     SELECT City, Title FROM employees
 </details>
 
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT et FROM
+</details>
+
 ---
 
 **2 - Récupérer toutes les infos des 30 premières chansons de type "Rock"**
@@ -85,6 +90,11 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
     LIMIT 30
 </details>
 
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, FROM, WHERE et LIMIT
+</details>
+
 ---
 
 **3 - Récupérer le nombre d'albums créé par l'artiste "Nirvana" (à vous de voir comment trouver son ID sans faire defiler la liste si vous avez envie) et l'afficher dans une colonne qui s'appelerait : "nombre_albums"**
@@ -106,6 +116,12 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
     WHERE albums.ArtistId = 110
 
 </details>
+
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, COUNT, AS, FROM et WHERE
+</details>
+
 
 ---
 
@@ -152,6 +168,11 @@ Si vous n'en avez pas, vous pouvez utiliser cette extension vscode (compatible a
     GROUP BY
         albumid
     LIMIT 9, 21
+</details>
+
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, FROM, GROUP BY, AS et LIMIT
 </details>
 
 
@@ -203,7 +224,7 @@ SELECT
 	tracks.Albumid,
 	title,
 	COUNT(trackid) AS nombre_de_chansons,
-	artists.Name as nom_artiste
+	artists.Name AS nom_artiste
 FROM
 	tracks
 INNER JOIN albums ON albums.Albumid = tracks.Albumid
@@ -211,6 +232,11 @@ INNER JOIN artists ON albums.ArtistId = artists.ArtistId
 GROUP BY
 	tracks.albumid
 HAVING COUNT(trackid) > 18;
+</details>
+
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, FROM, GROUP BY, INNER JOIN, AS et HAVING COUNT
 </details>
 
 * * *  
@@ -255,6 +281,10 @@ GROUP BY
 LIMIT 10
 </details>
 
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, FROM, GROUP BY, INNER JOIN, AS, STRFTIME, round, avg et LIMIT
+</details>
 
 * * *
 
@@ -293,3 +323,7 @@ ORDER BY
 </details>
 
 * * *  
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, FROM, GROUP BY, round, AVG, SUM, AS et ORDER BY
+</details>
