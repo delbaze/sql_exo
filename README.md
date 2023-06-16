@@ -561,7 +561,107 @@ FROM albums
 
 <details>
     <summary>INDICES</summary>
-    Vous devez utiliser SELECT, FROM ET EXCEPT
+    Vous devez utiliser SELECT, FROM et EXCEPT
+</details>
+
+---
+
+* * *
+
+**11 - Récupérer la liste des factures de 2010 ayant un montant inférieur à 5 et supérieur à 10, formatez le montant en euros, et la date de la facture sous cette forme par exemple: 10/01/2010 et classez les par montant croissant**
+
+<details>
+    <summary>Voir le résultat attendu</summary>
+
+## Factures de 2010 d'un montant inférieur à 5 et supérieur à 10
+---
+| InvoiceId | BillingAddress | Montant_Total | date | 
+| ---: | --- | --- | --- | 
+| 90 | 801 W 4th Street | 0.99 € | 26/01/2010 | 
+| 104 | Barbarossastraße 19 | 0.99 € | 29/03/2010 | 
+| 111 | 1 Microsoft Way | 0.99 € | 29/04/2010 | 
+| 118 | 421 Bourke Street | 0.99 € | 30/05/2010 | 
+| 125 | Rua da Assunção 53 | 0.99 € | 30/06/2010 | 
+| 132 | Qe 7 Bloco G | 0.99 € | 31/07/2010 | 
+| 139 | Celsiusg. 9 | 0.99 € | 31/08/2010 | 
+| 146 | 230 Elgin Street | 0.99 € | 01/10/2010 | 
+| 153 | Sønder Boulevard 51 | 0.99 € | 01/11/2010 | 
+| 160 | Via Degli Scipioni, 43 | 0.99 € | 02/12/2010 | 
+| 84 | 68, Rue Jouvence | 1.98 € | 08/01/2010 | 
+| 85 | Erzsébet krt. 58. | 1.98 € | 08/01/2010 | 
+| 91 | 120 S Orange Ave | 1.98 € | 08/02/2010 | 
+| 92 | 162 E Superior Street | 1.98 € | 08/02/2010 | 
+| 105 | 4, Rue Milton | 1.98 € | 11/04/2010 | 
+| 106 | 11, Place Bellecour | 1.98 € | 11/04/2010 | 
+| 112 | 627 Broadway | 1.98 € | 12/05/2010 | 
+| 113 | 541 Del Medio Avenue | 1.98 € | 12/05/2010 | 
+| 119 | 307 Macacha Güemes | 1.98 € | 12/06/2010 | 
+| 120 | 12,Community Centre | 1.98 € | 12/06/2010 | 
+| 126 | Rua dos Campeões Europeus de Viena, 4350 | 1.98 € | 13/07/2010 | 
+| 127 | Berger Straße 10 | 1.98 € | 13/07/2010 | 
+| 133 | 8210 111 ST NW | 1.98 € | 13/08/2010 | 
+| 134 | 1600 Amphitheatre Parkway | 1.98 € | 13/08/2010 | 
+| 140 | 202 Hoxton Street | 1.98 € | 13/09/2010 | 
+| 141 | 110 Raeburn Pl | 1.98 € | 13/09/2010 | 
+| 147 | 194A Chain Lake Drive | 1.98 € | 14/10/2010 | 
+| 148 | 5112 48 Street | 1.98 € | 14/10/2010 | 
+| 154 | Rua Dr. Falcão Filho, 155 | 1.98 € | 14/11/2010 | 
+| 155 | Praça Pio X, 119 | 1.98 € | 14/11/2010 | 
+| 161 | Lijnbaansgracht 120bg | 1.98 € | 15/12/2010 | 
+| 162 | C/ San Bernardo 85 | 1.98 € | 15/12/2010 | 
+| 97 | 3,Raj Bhavan Road | 1.99 € | 26/02/2010 | 
+| 86 | Via Degli Scipioni, 43 | 3.96 € | 09/01/2010 | 
+| 93 | 2211 W Berry Street | 3.96 € | 09/02/2010 | 
+| 100 | Klanova 9/506 | 3.96 € | 12/03/2010 | 
+| 107 | 68, Rue Jouvence | 3.96 € | 12/04/2010 | 
+| 114 | 120 S Orange Ave | 3.96 € | 13/05/2010 | 
+| 121 | Av. Brigadeiro Faria Lima, 2170 | 3.96 € | 13/06/2010 | 
+| 128 | 4, Rue Milton | 3.96 € | 14/07/2010 | 
+| 135 | 627 Broadway | 3.96 € | 14/08/2010 | 
+| 142 | 307 Macacha Güemes | 3.96 € | 14/09/2010 | 
+| 149 | Rua dos Campeões Europeus de Viena, 4350 | 3.96 € | 15/10/2010 | 
+| 156 | 8210 111 ST NW | 3.96 € | 15/11/2010 | 
+| 163 | 202 Hoxton Street | 3.96 € | 16/12/2010 | 
+| 98 | Av. Brigadeiro Faria Lima, 2170 | 3.98 € | 11/03/2010 | 
+| 99 | 1498 rue Bélanger | 3.98 € | 11/03/2010 | 
+| 110 | 1498 rue Bélanger | 13.86 € | 21/04/2010 | 
+| 117 | 11, Place Bellecour | 13.86 € | 22/05/2010 | 
+| 124 | 541 Del Medio Avenue | 13.86 € | 22/06/2010 | 
+| 131 | 12,Community Centre | 13.86 € | 23/07/2010 | 
+| 138 | Berger Straße 10 | 13.86 € | 23/08/2010 | 
+| 145 | 1600 Amphitheatre Parkway | 13.86 € | 23/09/2010 | 
+| 152 | 110 Raeburn Pl | 13.86 € | 24/10/2010 | 
+| 159 | 5112 48 Street | 13.86 € | 24/11/2010 | 
+| 166 | Praça Pio X, 119 | 13.86 € | 25/12/2010 | 
+| 103 | 162 E Superior Street | 15.86 € | 21/03/2010 | 
+| 88 | Calle Lira, 198 | 17.91 € | 13/01/2010 | 
+| 89 | Rotenturmstraße 4, 1010 Innere Stadt | 18.86 € | 18/01/2010 | 
+| 96 | Erzsébet krt. 58. | 21.86 € | 18/02/2010 | 
+
+
+</details>
+
+<details>
+    <summary>Voir la solution</summary>
+SELECT
+    InvoiceId,
+    BillingAddress,
+    FORMAT("%.2f €", Total) AS Montant_Total,
+    STRFTIME('%d/%m/%Y', InvoiceDate) AS date
+FROM
+    invoices
+WHERE
+    Total NOT BETWEEN 5 and 10
+AND STRFTIME('%Y', InvoiceDate) = "2010"
+
+ORDER BY
+    Total;    
+
+</details>
+
+<details>
+    <summary>INDICES</summary>
+    Vous devez utiliser SELECT, FROM, FORMAT, STRFTIME, NOT BETWEEN,  AS ET AND
 </details>
 
 ---
